@@ -1,1 +1,40 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="math_single" id="103" inline="true" x="-12" y="111">
+    <field name="OP">ABS</field>
+  </block>
+  <block type="math_shift" id="110" inline="true" x="63" y="194">
+    <field name="OP">LEFT</field>
+  </block>
+  <block type="controls_whileUntil" id="15" inline="false" x="274" y="188">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="logic_negate" id="27" inline="false">
+        <value name="NUMBER">
+          <block type="logic_operation" id="61" inline="true">
+            <field name="OP">LOR</field>
+            <value name="A">
+              <block type="sensor_object" id="34">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="sensor_object" id="68">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_forward" id="44"></block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="78"></block>
+    </next>
+  </block>
+  <block type="math_bitwise" id="119" inline="true" x="-12" y="231">
+    <field name="OP">AND</field>
+  </block>
+  <block type="sensor_battery" id="150" x="3" y="307"></block>
+</xml>
